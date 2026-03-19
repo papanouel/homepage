@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { 
   Gamepad2, 
   Cloud, 
@@ -41,6 +41,12 @@ const expertiseColors = [
 ];
 
 export default function App() {
+  const expertiseRef = useRef<HTMLElement>(null);
+
+  const scrollToExpertise = () => {
+    expertiseRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Background Gradients */}
@@ -85,7 +91,10 @@ export default function App() {
                 Book a Session
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium">
+              <button 
+                onClick={scrollToExpertise}
+                className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium"
+              >
                 View Expertise
               </button>
             </div>
@@ -163,7 +172,7 @@ export default function App() {
       </section>
 
       {/* Expertise Section */}
-      <section className="relative py-32 z-10">
+      <section ref={expertiseRef} className="relative py-32 z-10">
         <div className="container max-w-6xl mx-auto px-6">
           <div className="text-center mb-24">
             <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Expertise</span>
