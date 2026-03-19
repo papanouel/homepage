@@ -32,7 +32,7 @@ const metadataPlugin = () => ({
 });
 
 export default defineConfig({
-  base: '/homepage/',
+  base: '/',
   plugins: [react(), tailwindcss(), metadataPlugin()],
   resolve: {
     alias: {
