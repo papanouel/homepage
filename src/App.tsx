@@ -309,13 +309,15 @@ export default function App() {
             </div>
             <div className="flex items-center gap-8">
               {[
-                { icon: <Twitter className="w-5 h-5" />, href: "#" },
-                { icon: <Linkedin className="w-5 h-5" />, href: "#" },
-                { icon: <Mail className="w-5 h-5" />, href: "#" }
+                { icon: <Twitter className="w-5 h-5" />, href: MENTOR_DATA.socials.twitter },
+                { icon: <Linkedin className="w-5 h-5" />, href: MENTOR_DATA.socials.linkedin },
+                { icon: <Mail className="w-5 h-5" />, href: MENTOR_DATA.socials.email }
               ].map((social, i) => (
                 <a 
                   key={i} 
                   href={social.href} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-zinc-500 hover:text-emerald-400 transition-all duration-300 transform hover:scale-110"
                 >
                   {social.icon}

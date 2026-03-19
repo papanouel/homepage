@@ -10,6 +10,11 @@ export interface MentorProfile {
   location: string;
   languages: string[];
   calendly: string;
+  socials: {
+    linkedin: string;
+    twitter: string;
+    email: string;
+  };
 }
 
 export interface ExpertiseArea {
@@ -123,5 +128,10 @@ export const MENTOR_DATA: MentorProfile = {
   philosophy: "I believe in 'Production-Ready' as a mindset. Whether you are coding a P2P multiplayer stack or scaling a startup team, the goal is to bridge the gap between complex technical challenges and market-ready products—fast.",
   location: "Tokyo / Remote",
   languages: ["French (Native)", "English (Fluent)", "Japanese (Business)"],
-  calendly: "https://calendly.com/papanouel/30min-call"
+  calendly: "https://calendly.com/papanouel/30min-call",
+  socials: {
+    linkedin: "https://www.linkedin.com/in/papanouel/",
+    twitter: "https://twitter.com/papanouel",
+    email: "mailto:fred.nouel@gmail.com"
+  }
 };
