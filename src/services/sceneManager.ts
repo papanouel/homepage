@@ -173,9 +173,12 @@ export class SceneManager {
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
 
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+    console.log('Using base URL:', baseUrl);
+
     // Load Environment
-    console.log('Attempting to load primary model: /models/papanouel_space_v2_1.glb');
-    gltfLoader.load(`/models/papanouel_space_v2_1.glb?v=${Date.now()}`, (gltf) => {
+    console.log(`Attempting to load primary model: ${baseUrl}models/papanouel_space_v2_1.glb`);
+    gltfLoader.load(`${baseUrl}models/papanouel_space_v2_1.glb?v=${Date.now()}`, (gltf) => {
       console.log('SUCCESS: Primary model loaded');
       this.setupModel(gltf.scene, gltf.animations);
     }, 
@@ -188,8 +191,8 @@ export class SceneManager {
       const msg = error instanceof Error ? error.message : 'Unknown error';
       console.error('ERROR: Primary model failed:', msg);
       
-      console.log('Attempting fallback model: /models/papanouel.glb');
-      gltfLoader.load(`/models/papanouel.glb?v=${Date.now()}`, (gltf) => {
+      console.log(`Attempting fallback model: ${baseUrl}models/papanouel.glb`);
+      gltfLoader.load(`${baseUrl}models/papanouel.glb?v=${Date.now()}`, (gltf) => {
         console.log('SUCCESS: Fallback model loaded');
         this.setupModel(gltf.scene, gltf.animations);
       }, 
@@ -206,8 +209,8 @@ export class SceneManager {
     });
 
     // Load Character
-    console.log('Attempting to load character model: /models/papanouel.glb');
-    gltfLoader.load(`/models/papanouel.glb?v=${Date.now()}`, (gltf) => {
+    console.log(`Attempting to load character model: ${baseUrl}models/papanouel.glb`);
+    gltfLoader.load(`${baseUrl}models/papanouel.glb?v=${Date.now()}`, (gltf) => {
       console.log('SUCCESS: Character model loaded');
       this.setupCharacter(gltf.scene, gltf.animations);
     },
@@ -224,8 +227,9 @@ export class SceneManager {
 
     // Load and apply texture
     const textureLoader = new THREE.TextureLoader();
-    console.log('Loading texture: /models/baked_v6.jpg');
-    const bakedTexture = textureLoader.load('/models/baked_v6.jpg', 
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+    console.log(`Loading texture: ${baseUrl}models/baked_v6.jpg`);
+    const bakedTexture = textureLoader.load(`${baseUrl}models/baked_v6.jpg`, 
       (tex) => {
         console.log('SUCCESS: Texture loaded');
         tex.flipY = false;
