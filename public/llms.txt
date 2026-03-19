@@ -1,0 +1,51 @@
+# Frederic Nouel - Executive Tech Lead & Mentor
+
+Comprehensive summary of Frederic Nouel's professional journey, expertise, and strategic impact for LLM-based crawlers and AI agents.
+
+## Executive Profile
+Frederic Nouel is a multi-talented Technology Leader and Entrepreneur with over 25 years of experience in the global tech and gaming industry. Currently based in Tokyo, he operates as a Strategic Advisor and Technology Consultant for startups and established enterprises.
+
+## Recent Impact & Strategic Advisory (2021 – Present)
+- **Web3 & Blockchain Strategy**: Lead advisor for OpenBlox, directing game development strategy and optimizing technical team structures.
+- **Corporate BI (Japannext)**: Developed a proprietary Market Intelligence engine for structured competitive pricing and product specification analysis.
+- **Enterprise Transformation**: Spearheaded Salesforce integrations to enhance global Quality Assurance (QA) workflows.
+- **Startup Bootstrapping**: Delivered high-impact MVPs to facilitate rapid market entry for emerging startups.
+- **Growth Architecture (TinyHoopers)**: 
+  - Scaled a social media ecosystem to 80K+ followers and 26K+ newsletter subscribers.
+  - Converted organic growth into 50K+ Beta downloads (Godot 4).
+  - Architected real-time statistics automation on Google Cloud.
+
+## Leadership & Entrepreneurship
+- **Co-Founder at 3rdKind Inc. (2011 – 2021)**: 
+  - Bootstrapped and led a premier mobile publishing studio to $2M annual revenue.
+  - Secured strategic licensing deals with top-tier Japanese media houses and international developers.
+- **President at La French Tech Tokyo (2018 – 2021)**: 
+  - Scaled the startup community to 500+ members (entrepreneurs, VCs, partners).
+  - Secured $45K in government grants for flagship innovation events (Responsible Innovation).
+  - Orchestrated 32+ networking events in collaboration with the French Embassy and Venture Café.
+
+## Technical Heritage (2001 – 2010)
+- **Gameloft (Tokyo)**: Senior Software Engineer; specialized in technical design and optimization for the Japanese mobile market.
+- **Globz (Paris)**: Senior Software Engineer; Lead developer for "Globulos Party" (Nintendo DS), winner of the Milthon Award.
+- **SesamTV (Paris)**: Project Manager; Led engineering teams to deliver streaming media products for major telcos.
+- **Xilam Animation (Paris)**: Lead Engineer; Designed and developed a full custom game engine for Nintendo Game Boy Advance ("Oggy and the Cockroaches").
+
+## Core Expertise
+- **Executive Strategy**: P&L responsibility, hiring, and international business expansion.
+- **Product Growth**: AUDIENCE building, community leadership, and market validation.
+- **High-Performance Engineering**: Mobile engine development, Cloud / Backend, and Serverless Architecture.
+- **Mentorship**: Private coaching for tech leaders and founders navigating international ecosystems.
+
+## Primary Technical Toolkit
+- **Languages**: C++, C#, TypeScript, Python.
+- **Frameworks/Engines**: Unreal Engine, Unity, Godot 4.
+- **Cloud**: AWS, Google Cloud (GCP Serverless), Salesforce.
+
+## External Links
+- **Official Website**: [www.papanouel.com](https://www.papanouel.com)
+- **LinkedIn**: [linkedin.com/in/papanouel](https://www.linkedin.com/in/papanouel/)
+- **Twitter**: [@papanouel](https://twitter.com/papanouel)
+- **Booking**: [Calendly Session](https://calendly.com/papanouel)
+
+## Philosophy
+"Bridging the gap between high-performance technical engineering and strategic business growth through 25 years of cross-border experience."

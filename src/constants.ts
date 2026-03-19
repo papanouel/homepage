@@ -51,8 +51,8 @@ export const DIALOGUES: Dialogue[] = [
 export const MENTOR_DATA: MentorProfile = {
   name: "Frederic Nouel",
   title: "Executive Tech Lead | Game Dev Veteran | Growth Architect",
-  tagline: "Bridging the gap between complex technical challenges and market-ready products.",
-  bio: "With over 20 years of experience shipping 45+ titles across mobile and console, Frederic blends deep technical execution with high-level strategic leadership. From founding and scaling startups in Tokyo to architecting serverless cloud backends, he specializes in taking products from zero to a massive scale.",
+  tagline: "Converting technical expertise into scalable business growth.",
+  bio: "From bootstrapping a $2M annual revenue publishing house to scaling a 500+ member startup community in Tokyo, Frederic has spent 25 years at the intersection of high-performance engineering and strategic operations. Whether it's shipping 45+ titles or architecting serverless BI engines, he bridges the gap between deep tech and market success.",
   expertise: [
     {
       title: "Game Development & Engineering",
@@ -87,24 +87,29 @@ export const MENTOR_DATA: MentorProfile = {
   ],
   career: [
     {
-      role: "Independent Developer & Growth Engineer",
+      role: "Strategic Advisor & Consultant",
+      company: "Tokyo/Remote",
+      description: "Advising Web3/Blockchain ventures (OpenBlox), architecting Market Intelligence engines for Fintech leaders (Japannext), and delivering high-impact MVPs for emerging startups."
+    },
+    {
+      role: "Venture Development",
       company: "TinyHoopers",
-      description: "Scaled TinyHoopers to 80K+ downloads and built a social community of 50K+ followers using automated serverless pipelines."
+      description: "Scaled a social media ecosystem to 80K+ followers and 20K+ subscribers. Converted organic growth into 50K+ Beta downloads via automated serverless pipelines."
     },
     {
-      role: "Strategic Consultant",
-      company: "Games & Tech Industries",
-      description: "Advised blockchain ventures and architected high-volume BI engines for market leaders."
-    },
-    {
-      role: "Co-Founder & COO",
+      role: "Co-Founder",
       company: "3rdKind Inc.",
-      description: "Spent a decade scaling a 29-person team and managing technical integrations for global IPs like TV Tokyo and Sanrio."
+      description: "Bootstrapped and led a mobile publishing studio to $2M in annual revenue, securing strategic licensing deals with top-tier icons like TV Tokyo and Sanrio."
     },
     {
-      role: "Community Leader",
+      role: "President",
       company: "La French Tech Tokyo",
-      description: "Former President, bridging the gap between entrepreneurs, VCs, and the Japanese government."
+      description: "Scaled the Tokyo startup ecosystem to 500+ members and secured $45K in government grants for flagship innovation initiatives."
+    },
+    {
+      role: "Early Career (2001-2010)",
+      company: "Gameloft / Globz / Xilam",
+      description: "Lead developer for award-winning Nintendo DS titles (Globulos Party) and architected custom engines for Nintendo Game Boy Advance."
     }
   ],
   toolkit: [
