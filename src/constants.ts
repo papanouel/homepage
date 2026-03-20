@@ -50,10 +50,15 @@ export const DIALOGUES: Dialogue[] = [
 
 export const MENTOR_DATA: MentorProfile = {
   name: "Frederic Nouel",
-  title: "Executive Tech Lead | Game Dev Veteran | Growth Architect",
-  tagline: "Converting technical expertise into scalable business growth.",
-  bio: "From bootstrapping a $2M annual revenue publishing house to scaling a 500+ member startup community in Tokyo, Frederic has spent 25 years at the intersection of high-performance engineering and strategic operations. Whether it's shipping 45+ titles or architecting serverless BI engines, he bridges the gap between deep tech and market success.",
+  title: "Consulting & Mentoring",
+  tagline: "Working with founders, game developers, and companies on technical and lean process strategies to drive product growth.",
+  bio: "With 25+ years at the intersection of engineering and strategy, I’ve bootstrapped a $2M revenue mobile game publisher, scaled a 500+ member Tokyo startup community, and shipped 50+ games. I help founders and developers bridge the gap between technical execution and business operations.",
   expertise: [
+    {
+      title: "Entrepreneurship in Japan",
+      description: "Navigating the Tokyo startup ecosystem, fundraising (grants), and co-founder dynamics.",
+      icon: "Globe"
+    },
     {
       title: "Game Development & Engineering",
       description: "Advanced Godot 4 & Unity; building custom engines and real-time multiplayer architecture.",
@@ -65,36 +70,21 @@ export const MENTOR_DATA: MentorProfile = {
       icon: "Cloud"
     },
     {
-      title: "Engineering & Leadership",
-      description: "Scaling high-performing teams, establishing Agile cultures, and navigating technical recruitment.",
-      icon: "Users"
-    },
-    {
       title: "Growth & Product Strategy",
       description: "Rapid MVP prototyping, validating product-market fit, and engineering automated data pipelines.",
       icon: "TrendingUp"
-    },
-    {
-      title: "Entrepreneurship in Japan",
-      description: "Navigating the Tokyo startup ecosystem, fundraising (grants), and co-founder dynamics.",
-      icon: "Globe"
-    },
-    {
-      title: "Founder Mentoring",
-      description: "Navigating the Tokyo startup ecosystem, fundraising (grants), and co-founder dynamics.",
-      icon: "Handshake"
     }
   ],
   career: [
     {
       role: "Strategic Advisor & Consultant",
       company: "Tokyo/Remote",
-      description: "Advising Web3/Blockchain ventures (OpenBlox), architecting Market Intelligence engines for Fintech leaders (Japannext), and delivering high-impact MVPs for emerging startups."
+      description: "Advised Web3/Blockchain ventures on game team building, architecting Market Intelligence engines ecommerce company, and delivering high-impact MVPs for emerging startups."
     },
     {
-      role: "Venture Development",
+      role: "Indie Game Development",
       company: "TinyHoopers",
-      description: "Scaled a social media ecosystem to 80K+ followers and 20K+ subscribers. Converted organic growth into 50K+ Beta downloads via automated serverless pipelines."
+      description: "Scaled a social media ecosystem to 50K+ followers, 12K+ Discord members and 20K+ email subscribers. Converted organic growth into 80K+ Beta downloads via automated serverless pipelines."
     },
     {
       role: "Co-Founder",
@@ -102,15 +92,15 @@ export const MENTOR_DATA: MentorProfile = {
       description: "Bootstrapped and led a mobile publishing studio to $2M in annual revenue, securing strategic licensing deals with top-tier icons like TV Tokyo and Sanrio."
     },
     {
-      role: "President",
+      role: "President & Board Member",
       company: "La French Tech Tokyo",
-      description: "Scaled the Tokyo startup ecosystem to 500+ members and secured $45K in government grants for flagship innovation initiatives."
-    },
-    {
-      role: "Early Career (2001-2010)",
-      company: "Gameloft / Globz / Xilam",
-      description: "Lead developer for award-winning Nintendo DS titles (Globulos Party) and architected custom engines for Nintendo Game Boy Advance."
+      description: "Scaled the Tokyo startup ecosystem to 500+ members and secured €45K in government grants for flagship innovation initiatives."
     }
+    // {
+    //   role: "Early Career (2001-2010)",
+    //   company: "Gameloft / Globz / Xilam",
+    //   description: "Lead developer for award-winning Nintendo DS titles (Globulos Party) and architected custom engines for Nintendo Game Boy Advance."
+    // }
   ],
   toolkit: [
     {

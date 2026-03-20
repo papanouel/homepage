@@ -65,7 +65,7 @@ export default function App() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 mb-8">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Available for Mentoring & Consulting
+                Available Now
               </div>
 
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20 leading-[0.8]">
@@ -132,7 +132,7 @@ export default function App() {
                 transition={{ duration: 0.8 }}
               >
                 <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">The Vision</span>
-                <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">Executive Tech Lead &<br />Growth Architect</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">An experienced <br />Tech Lead & Founder</h2>
                 <p className="text-zinc-400 text-xl leading-relaxed mb-10 font-light">
                   {MENTOR_DATA.bio}
                 </p>
@@ -150,10 +150,10 @@ export default function App() {
 
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { label: "Years Experience", value: "20+", color: "text-blue-400" },
-                  { label: "Titles Shipped", value: "45+", color: "text-emerald-400" },
-                  { label: "Downloads", value: "80K+", color: "text-violet-400" },
-                  { label: "Community", value: "50K+", color: "text-rose-400" }
+                  { label: "Years Experience", value: "25+", color: "text-blue-400" },
+                  { label: "Game Shipped", value: "50+", color: "text-emerald-400" },
+                  { label: "Years in Japan", value: "17+", color: "text-violet-400" },
+                  { label: "ventures", value: "4", color: "text-rose-400" }
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
@@ -178,10 +178,10 @@ export default function App() {
             <div className="text-center mb-24">
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Expertise</span>
               <h2 className="text-4xl md:text-6xl font-bold mb-6">Consulting & Mentorship</h2>
-              <p className="text-zinc-500 text-lg max-w-2xl mx-auto font-light">Specialized guidance for scaling tech products and high-performing teams.</p>
+              <p className="text-zinc-500 text-lg max-w-2xl mx-auto font-light">Specialized in game development, system automation and startup ecosystem  </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {MENTOR_DATA.expertise.map((item, idx) => (
                 <motion.div
                   key={idx}
