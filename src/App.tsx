@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { 
-  Gamepad2, 
-  Cloud, 
-  Users, 
-  TrendingUp, 
+import {
+  Gamepad2,
+  Cloud,
+  Users,
+  TrendingUp,
   Globe,
   ChevronRight,
   Mail,
@@ -51,7 +51,7 @@ export default function App() {
     <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Background Gradients */}
       <div className="fixed inset-0 bg-mesh pointer-events-none z-0" />
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-16 z-10">
@@ -67,21 +67,21 @@ export default function App() {
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 Available for Mentoring & Consulting
               </div>
-              
+
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20 leading-[0.8]">
                 Frederic<br />Nouel
               </h1>
-              
+
               <p className="text-emerald-400 font-display text-sm md:text-base tracking-[0.2em] uppercase mb-8 font-semibold">
                 {MENTOR_DATA.title}
               </p>
-              
+
               <p className="max-w-xl text-lg md:text-xl text-zinc-400 leading-relaxed mb-12 font-light">
                 {MENTOR_DATA.tagline}
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center gap-6">
-                <button 
+                <button
                   onClick={() => {
                     if (window.Calendly) {
                       window.Calendly.initPopupWidget({ url: MENTOR_DATA.calendly });
@@ -89,10 +89,10 @@ export default function App() {
                   }}
                   className="w-full sm:w-auto px-10 py-5 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all duration-500 flex items-center justify-center gap-3 group shadow-xl shadow-white/5"
                 >
-                  Book a Session
+                  Book a FREE Session
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button 
+                <button
                   onClick={scrollToExpertise}
                   className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium"
                 >
@@ -102,18 +102,18 @@ export default function App() {
             </motion.div>
 
             {/* Right Column: 3D Scene */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
               className="relative aspect-[16/13] w-full max-w-2xl mx-auto order-1 md:order-2 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-300 to-indigo-400 border-[6px] border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.2)]"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-20" />
-              
+
               {/* Decorative Elements */}
               <div className="absolute top-10 right-10 w-24 h-24 bg-white/20 blur-3xl rounded-full z-0 animate-pulse" />
               <div className="absolute bottom-20 left-10 w-32 h-32 bg-indigo-500/20 blur-3xl rounded-full z-0 animate-pulse delay-1000" />
-              
+
               <div className="relative z-10 w-full h-full">
                 <HeroScene />
               </div>
@@ -147,7 +147,7 @@ export default function App() {
                   </div>
                 </div>
               </motion.div>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { label: "Years Experience", value: "20+", color: "text-blue-400" },
@@ -155,7 +155,7 @@ export default function App() {
                   { label: "Downloads", value: "80K+", color: "text-violet-400" },
                   { label: "Community", value: "50K+", color: "text-rose-400" }
                 ].map((stat, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -198,7 +198,7 @@ export default function App() {
                   <p className="text-zinc-400 leading-relaxed text-lg font-light">
                     {item.description}
                   </p>
-                  
+
                   {/* Subtle background glow for the card */}
                   <div className={`absolute -bottom-10 -right-10 w-32 h-32 blur-[60px] opacity-0 group-hover:opacity-20 transition-opacity duration-700 ${expertiseColors[idx % expertiseColors.length].split(' ')[1]}`} />
                 </motion.div>
@@ -214,11 +214,11 @@ export default function App() {
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Journey</span>
               <h2 className="text-4xl md:text-6xl font-bold">Career Snapshot</h2>
             </div>
-            
+
             <div className="max-w-4xl mx-auto relative">
               {/* Timeline Line */}
               <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-zinc-800 to-transparent md:-translate-x-1/2" />
-              
+
               <div className="space-y-24">
                 {MENTOR_DATA.career.map((item, idx) => (
                   <motion.div
@@ -230,7 +230,7 @@ export default function App() {
                   >
                     {/* Timeline Dot */}
                     <div className="absolute left-[-4px] md:left-1/2 top-0 w-2 h-2 rounded-full bg-emerald-500 md:-translate-x-1/2 shadow-[0_0_10px_rgba(16,185,129,0.5)] z-20" />
-                    
+
                     <div className={`w-full md:w-1/2 ${idx % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                       <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.2em] mb-3 block font-bold">{item.company}</span>
                       <h3 className="text-2xl font-bold mb-4">{item.role}</h3>
@@ -254,10 +254,10 @@ export default function App() {
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Stack</span>
               <h2 className="text-4xl md:text-6xl font-bold">Technical Toolkit</h2>
             </div>
-            
+
             <div className="grid md:grid-cols-4 gap-12">
               {MENTOR_DATA.toolkit.map((cat, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -285,7 +285,7 @@ export default function App() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
           <div className="container mx-auto px-6 text-center max-w-5xl">
             <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.4em] mb-12 block font-bold">The Mentor Philosophy</span>
-            <motion.blockquote 
+            <motion.blockquote
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -315,9 +315,9 @@ export default function App() {
                 { icon: <Linkedin className="w-5 h-5" />, href: MENTOR_DATA.socials.linkedin, label: "LinkedIn Profile" },
                 { icon: <Mail className="w-5 h-5" />, href: MENTOR_DATA.socials.email, label: "Email Frederic" }
               ].map((social, i) => (
-                <a 
-                  key={i} 
-                  href={social.href} 
+                <a
+                  key={i}
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
