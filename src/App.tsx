@@ -108,7 +108,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-              className="relative aspect-[16/13] w-full max-w-2xl mx-auto order-1 md:order-2 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-300 to-indigo-400 border-[6px] border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.2)]"
+              className="relative aspect-[16/13] w-full max-w-2xl mx-auto order-1 md:order-2 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-300 to-indigo-400 border border-white/20 ring-1 ring-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)]"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-20" />
 
