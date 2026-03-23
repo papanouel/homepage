@@ -306,8 +306,16 @@ export default function App() {
       <footer className="relative py-16 z-10 bg-[#050505] border-t border-white/5">
         <div className="container max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
-            <div className="text-zinc-500 text-sm font-medium">
-              © 2026 {MENTOR_DATA.name}. Built with passion in Tokyo.
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="text-zinc-500 text-sm font-medium">
+                © 2026 {MENTOR_DATA.name}. Built with passion in Tokyo.
+              </div>
+              <a 
+                href="/disclosure" 
+                className="text-zinc-500 hover:text-emerald-400 text-xs transition-colors"
+              >
+                特定商取引法に基づく表記 (Commercial Disclosure)
+              </a>
             </div>
             <div className="flex items-center gap-8">
               {[
