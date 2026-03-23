@@ -283,17 +283,48 @@ export default function App() {
         {/* Philosophy Section */}
         <section className="relative py-48 z-10 overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
-          <div className="container mx-auto px-6 text-center max-w-5xl">
-            <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.4em] mb-12 block font-bold">The Mentor Philosophy</span>
-            <motion.blockquote
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-6xl lg:text-7xl font-light italic leading-[1.1] mb-16 tracking-tight"
-            >
-              "{MENTOR_DATA.philosophy}"
-            </motion.blockquote>
-            <div className="flex items-center justify-center gap-6">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+
+              {/* My Philosophy */}
+              <div className="text-center md:text-left flex flex-col h-full">
+                <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.4em] mb-10 block font-bold">The Mentor Philosophy</span>
+                <motion.blockquote
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
+                >
+                  "{MENTOR_DATA.philosophy}"
+                </motion.blockquote>
+                <div className="flex items-center justify-center md:justify-start gap-4 opacity-50">
+                  <div className="w-12 h-px bg-zinc-600" />
+                  <span className="text-zinc-400 uppercase tracking-[0.2em] text-xs font-bold">Mindset</span>
+                </div>
+              </div>
+
+              {/* Consultant Philosophy */}
+              <div className="text-center md:text-left flex flex-col h-full">
+                <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.4em] mb-10 block font-bold">The Consultant Philosophy</span>
+                <motion.blockquote
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
+                >
+                  "{MENTOR_DATA.consultantPhilosophy}"
+                </motion.blockquote>
+                <div className="flex items-center justify-center md:justify-start gap-4 opacity-50">
+                  <div className="w-12 h-px bg-zinc-600" />
+                  <span className="text-zinc-400 uppercase tracking-[0.2em] text-xs font-bold">Objective</span>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Signature at bottom */}
+            <div className="mt-24 flex items-center justify-center gap-6">
               <div className="w-16 h-px bg-zinc-800" />
               <span className="text-zinc-500 uppercase tracking-[0.3em] text-sm font-bold">{MENTOR_DATA.name}</span>
               <div className="w-16 h-px bg-zinc-800" />
@@ -310,8 +341,8 @@ export default function App() {
               <div className="text-zinc-500 text-sm font-medium">
                 © 2026 {MENTOR_DATA.name}. Built with passion in Tokyo.
               </div>
-              <a 
-                href="/disclosure" 
+              <a
+                href="/disclosure"
                 className="text-zinc-500 hover:text-emerald-400 text-xs transition-colors"
               >
                 特定商取引法に基づく表記 (Commercial Disclosure)

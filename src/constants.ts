@@ -7,6 +7,7 @@ export interface MentorProfile {
   career: CareerItem[];
   toolkit: ToolkitCategory[];
   philosophy: string;
+  consultantPhilosophy: string;
   location: string;
   languages: string[];
   calendly: string;
@@ -120,7 +121,8 @@ export const MENTOR_DATA: MentorProfile = {
       items: ["Figma", "Blender", "Photoshop"]
     }
   ],
-  philosophy: "I believe in 'Production-Ready' as a mindset. Whether you are coding a P2P multiplayer stack or scaling a startup team, the goal is to bridge the gap between complex technical challenges and market-ready products—fast.",
+  philosophy: "Reaching your goal is an equation of time and rigorous effort. My role is to help you optimize that equation—staying prepared and refusing to quit until you break through.",
+  consultantPhilosophy: "The goal is to bridge the gap between complex technical challenges and market-ready products—fast. For founders launching an MVP, the surest path to success is lean, iterative execution.",
   location: "Tokyo / Remote",
   languages: ["French (Native)", "English (Fluent)", "Japanese (Business)"],
   calendly: "https://calendly.com/papanouel/30min-call",
