@@ -24,6 +24,7 @@
   <meta property="twitter:image" content="https://www.papanouel.com/images/banner_1200x628.png" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.ico">
   <link rel="canonical" href="https://www.papanouel.com/" />
   <link rel="alternate" type="text/plain" href="/llms.txt" />
   
@@ -53,7 +54,22 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- SEO Fallback Content for basic crawlers that don't execute JS -->
+    <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+      <h1>Frederic Nouel - Consulting & Mentoring</h1>
+      <p>Consulting and mentoring services for tech founders, game developers, and companies. With over 25 years at the intersection of engineering and strategy, Frederic Nouel helps creators bridge the gap between technical execution and business operations.</p>
+      
+      <h2>Core Expertise</h2>
+      <p>Specializing in AI Prototyping & Systems, Cloud & Scalable AI Infrastructure, Growth Automation, Game Development, and Entrepreneurship in Japan. Whether building on GCP or designing custom engines, Frederic Nouel empowers startups to thrive.</p>
+      
+      <h2>Consulting Philosophy</h2>
+      <p>The goal is to bridge the gap between complex technical challenges and market-ready products—fast. For founders launching an MVP, the surest path to success is lean, iterative execution. Reaching your goal is an equation of time and rigorous effort. My role is to help you optimize that equation—staying prepared and refusing to quit until you break through.</p>
+      
+      <h2>Background and Career</h2>
+      <p>Based in Tokyo, remote friendly. Career highlights include roles as Co-Founder of a major mobile publisher, Indie Game Developer, and President of La French Tech Tokyo. Let's start the next big venture together.</p>
+    </div>
+  </div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
