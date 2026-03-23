@@ -56,9 +56,19 @@ export const MENTOR_DATA: MentorProfile = {
   bio: "With 25+ years at the intersection of engineering and strategy, I’ve bootstrapped a $2M revenue mobile game publisher, scaled a 500+ member Tokyo startup community, and shipped 50+ games. I help founders and developers bridge the gap between technical execution and business operations.",
   expertise: [
     {
-      title: "Entrepreneurship in Japan",
-      description: "Navigating the Tokyo startup ecosystem, fundraising (grants), and co-founder dynamics.",
-      icon: "Globe"
+      title: "AI Prototyping & Systems",
+      description: "Rapid prototyping with LLMs, agents, and AI workflows to turn ideas into working products fast.",
+      icon: "Bot"
+    },
+    {
+      title: "Cloud & Scalable AI Infrastructure",
+      description: "GCP-based architectures for AI-enabled products (Cloud Run, pipelines, real-time systems).",
+      icon: "Cloud"
+    },
+    {
+      title: "Growth Automation",
+      description: "Scaling social media communities through automated content pipelines, AI workflows, and rapid iteration.",
+      icon: "TrendingUp"
     },
     {
       title: "Game Development & Engineering",
@@ -66,14 +76,9 @@ export const MENTOR_DATA: MentorProfile = {
       icon: "Gamepad2"
     },
     {
-      title: "Cloud Infrastructure & DevOps",
-      description: "Architecting scalable backends on GCP (Cloud Run, Pub/Sub, CI/CD) and enterprise system integrations.",
-      icon: "Cloud"
-    },
-    {
-      title: "Growth & Product Strategy",
-      description: "Rapid MVP prototyping, validating product-market fit, and engineering automated data pipelines.",
-      icon: "TrendingUp"
+      title: "Entrepreneurship in Japan",
+      description: "Navigating the Tokyo startup ecosystem, fundraising (grants), and co-founder dynamics.",
+      icon: "Lightbulb"
     }
   ],
   career: [

@@ -4,7 +4,8 @@ import {
   Cloud,
   Users,
   TrendingUp,
-  Globe,
+  Bot,
+  Lightbulb,
   ChevronRight,
   Mail,
   Handshake,
@@ -28,7 +29,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Cloud: <Cloud className="w-6 h-6" />,
   Users: <Users className="w-6 h-6" />,
   TrendingUp: <TrendingUp className="w-6 h-6" />,
-  Globe: <Globe className="w-6 h-6" />,
+  Bot: <Bot className="w-6 h-6" />,
+  Lightbulb: <Lightbulb className="w-6 h-6" />,
   Handshake: <Handshake className="w-6 h-6" />,
 };
 
@@ -181,7 +183,7 @@ export default function App() {
               <p className="text-zinc-500 text-lg max-w-2xl mx-auto font-light">Specialized in game development, system automation and startup ecosystem  </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
               {MENTOR_DATA.expertise.map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -189,7 +191,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="p-10 rounded-[2.5rem] glass hover:bg-white/[0.06] transition-all duration-500 group relative overflow-hidden"
+                  className={`p-10 rounded-[2.5rem] glass hover:bg-white/[0.06] transition-all duration-500 group relative overflow-hidden ${idx < 3 ? 'md:col-span-2' : 'md:col-span-3'}`}
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${expertiseColors[idx % expertiseColors.length]}`}>
                     {iconMap[item.icon]}
@@ -286,14 +288,14 @@ export default function App() {
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
 
-              {/* My Philosophy */}
+              {/* Mentor Philosophy */}
               <div className="text-center md:text-left flex flex-col h-full">
                 <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.4em] mb-10 block font-bold">The Mentor Philosophy</span>
                 <motion.blockquote
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
+                  className="text-xl md:text-2xl lg:text-3xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
                 >
                   "{MENTOR_DATA.philosophy}"
                 </motion.blockquote>
@@ -311,7 +313,7 @@ export default function App() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
+                  className="text-xl md:text-2xl lg:text-3xl font-light italic leading-[1.3] mb-12 tracking-tight flex-grow"
                 >
                   "{MENTOR_DATA.consultantPhilosophy}"
                 </motion.blockquote>
