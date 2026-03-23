@@ -4,10 +4,11 @@ import App from './App.tsx';
 import Disclosure from './Disclosure.tsx';
 import './index.css';
 
-const path = window.location.pathname;
+const params = new URLSearchParams(window.location.search);
+const isDisclosure = params.get('page') === 'disclosure';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {path === '/disclosure' ? <Disclosure /> : <App />}
+    {isDisclosure ? <Disclosure /> : <App />}
   </StrictMode>,
 );

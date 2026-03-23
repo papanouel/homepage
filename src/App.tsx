@@ -344,7 +344,7 @@ export default function App() {
                 © 2026 {MENTOR_DATA.name}. Built with passion in Tokyo.
               </div>
               <a
-                href="/disclosure"
+                href="/?page=disclosure"
                 className="text-zinc-500 hover:text-emerald-400 text-xs transition-colors"
               >
                 特定商取引法に基づく表記 (Commercial Disclosure)
