@@ -14,6 +14,7 @@ export interface MentorProfile {
   socials: {
     linkedin: string;
     twitter: string;
+    instagram: string;
     email: string;
   };
 }
@@ -29,6 +30,10 @@ export interface CareerItem {
   company: string;
   description: string;
   period?: string;
+  link?: {
+    text: string;
+    url: string;
+  };
 }
 
 export interface ToolkitCategory {
@@ -90,7 +95,11 @@ export const MENTOR_DATA: MentorProfile = {
     {
       role: "Indie Game Development",
       company: "TinyHoopers",
-      description: "Scaled a social media ecosystem to 50K+ followers, 12K+ Discord members and 20K+ email subscribers. Converted organic growth into 80K+ Beta downloads via automated serverless pipelines."
+      description: "Scaled a social media ecosystem to 50K+ followers, 12K+ Discord members and 20K+ email subscribers. Converted organic growth into 80K+ Beta downloads via automated serverless pipelines.",
+      link: {
+        text: "Read the Case Study",
+        url: "/?page=tinyhoopers"
+      }
     },
     {
       role: "Co-Founder",
@@ -134,6 +143,7 @@ export const MENTOR_DATA: MentorProfile = {
   socials: {
     linkedin: "https://www.linkedin.com/in/papanouel/",
     twitter: "https://twitter.com/papanouel",
+    instagram: "https://instagram.com/tinyhoopers",
     email: "mailto:fred.nouel@gmail.com"
   }
 };
