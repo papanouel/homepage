@@ -196,7 +196,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`p-10 rounded-[2.5rem] glass hover:bg-white/[0.06] transition-all duration-500 group relative overflow-hidden ${idx < 3 ? 'md:col-span-2' : 'md:col-span-3'}`}
+                  className={`p-10 rounded-[2.5rem] glass hover:bg-white/[0.06] transition-all duration-500 group relative overflow-hidden md:col-span-2 ${idx === 3 ? 'md:col-start-2' : ''}`}
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${expertiseColors[idx % expertiseColors.length]}`}>
                     {iconMap[item.icon]}
