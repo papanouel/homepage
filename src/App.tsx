@@ -63,7 +63,7 @@ export default function App() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative z-10 text-left order-2 md:order-1"
+              className="relative z-10 text-center md:text-left flex flex-col items-center md:items-start order-2 md:order-1"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 mb-8">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -78,7 +78,7 @@ export default function App() {
                 {MENTOR_DATA.title}
               </p>
 
-              <p className="max-w-xl text-lg md:text-xl text-zinc-400 leading-relaxed mb-12 font-light">
+              <p className="max-w-xl text-lg md:text-xl text-zinc-400 leading-relaxed mb-12 font-light text-center md:text-left">
                 {MENTOR_DATA.tagline}
               </p>
 
@@ -132,13 +132,14 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                className="text-center md:text-left flex flex-col items-center md:items-start"
               >
                 <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">The Vision</span>
                 <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">An experienced <br />Tech Lead & Founder</h2>
-                <p className="text-zinc-400 text-xl leading-relaxed mb-10 font-light">
+                <p className="text-zinc-400 text-xl leading-relaxed mb-10 font-light text-center md:text-left">
                   {MENTOR_DATA.bio}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center md:justify-start gap-2">
                   <div className="flex items-center gap-3 text-zinc-400 glass px-4 py-2 rounded-full">
                     <MapPin className="w-4 h-4 text-emerald-400" />
                     <span className="text-sm font-medium">{MENTOR_DATA.location}</span>
