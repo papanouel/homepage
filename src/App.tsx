@@ -94,12 +94,16 @@ export default function App() {
                   Book a FREE Session
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button
-                  onClick={scrollToExpertise}
-                  className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium"
+                <a
+                  href="#expertise"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToExpertise();
+                  }}
+                  className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium text-center inline-block"
                 >
                   View Expertise
-                </button>
+                </a>
               </div>
             </motion.div>
 
@@ -124,7 +128,7 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section className="relative py-32 z-10">
+        <section id="vision" className="relative py-32 z-10">
           <div className="container max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-20 items-center">
               <motion.div
@@ -176,7 +180,7 @@ export default function App() {
         </section>
 
         {/* Expertise Section */}
-        <section ref={expertiseRef} className="relative py-32 z-10">
+        <section id="expertise" ref={expertiseRef} className="relative py-32 z-10">
           <div className="container max-w-6xl mx-auto px-6">
             <div className="text-center mb-24">
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Expertise</span>
@@ -211,7 +215,7 @@ export default function App() {
         </section>
 
         {/* Career Snapshot */}
-        <section className="relative py-32 z-10">
+        <section id="journey" className="relative py-32 z-10">
           <div className="container max-w-6xl mx-auto px-6">
             <div className="text-center mb-24">
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Journey</span>
@@ -250,7 +254,7 @@ export default function App() {
         </section>
 
         {/* Toolkit Section */}
-        <section className="relative py-32 z-10 overflow-hidden">
+        <section id="toolkit" className="relative py-32 z-10 overflow-hidden">
           <div className="absolute inset-0 bg-zinc-950/50 backdrop-blur-3xl -z-10" />
           <div className="container max-w-6xl mx-auto px-6">
             <div className="text-center mb-24">
@@ -341,21 +345,21 @@ export default function App() {
         <div className="container max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="flex flex-col items-center md:items-start gap-4">
+              <nav className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-medium my-2">
+                <a href="#vision" className="text-zinc-500 hover:text-emerald-400 transition-colors">Vision</a>
+                <a href="#expertise" className="text-zinc-500 hover:text-emerald-400 transition-colors">Expertise</a>
+                <a href="#journey" className="text-zinc-500 hover:text-emerald-400 transition-colors">Journey</a>
+                <a href="#toolkit" className="text-zinc-500 hover:text-emerald-400 transition-colors">Toolkit</a>
+                <a href="/?page=disclosure" className="text-zinc-500 hover:text-emerald-400 text-xs transition-colors">特定商取引法に基づく表記 (Commercial Disclosure)</a>
+              </nav>
               <div className="text-zinc-500 text-sm font-medium">
                 © 2026 {MENTOR_DATA.name}. Built with passion in Tokyo.
               </div>
-              <a
-                href="/?page=disclosure"
-                className="text-zinc-500 hover:text-emerald-400 text-xs transition-colors"
-              >
-                特定商取引法に基づく表記 (Commercial Disclosure)
-              </a>
             </div>
             <div className="flex items-center gap-8">
               {[
                 { icon: <Twitter className="w-5 h-5" />, href: MENTOR_DATA.socials.twitter, label: "Twitter Profile" },
-                { icon: <Linkedin className="w-5 h-5" />, href: MENTOR_DATA.socials.linkedin, label: "LinkedIn Profile" },
-                { icon: <Mail className="w-5 h-5" />, href: MENTOR_DATA.socials.email, label: "Email Frederic" }
+                { icon: <Linkedin className="w-5 h-5" />, href: MENTOR_DATA.socials.linkedin, label: "LinkedIn Profile" }
               ].map((social, i) => (
                 <a
                   key={i}
