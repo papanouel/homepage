@@ -50,7 +50,19 @@ export const DIALOGUES: Dialogue[] = [
     sentences: ["Hello!", "What's up?", "Me I'm in a good mood.", "I am progressing so much on my current project."]
   },
   {
-    sentences: ["Do you know what I service I provide?", "I recommend you the mentorship.", "First 30minutes free."]
+    sentences: ["Do you know what service I provide?", "I recommend you the mentorship.", "First 30minutes free."]
+  },
+  {
+    sentences: ["I've lived in Tokyo for over 17 years now.", "It's a fantastic place for tech and design.", "The startup scene here is really unique."]
+  },
+  {
+    sentences: ["Have you seen the TinyHoopers project?", "It started as an automation experiment.", "Now it's a full-blown game with a huge community!"]
+  },
+  {
+    sentences: ["I love helping founders bridge the gap...", "...between complex tech and the market.", "Let's build something lean and fast!"]
+  },
+  {
+    sentences: ["I'm a big fan of AI-assisted workflows.", "It's not about replacing humans.", "It's about making execution 10x faster."]
   }
 ];
 
