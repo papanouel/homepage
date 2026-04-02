@@ -107,7 +107,7 @@ export default function App() {
                   }}
                   className="w-full sm:w-auto px-10 py-5 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all duration-500 flex items-center justify-center gap-3 group shadow-xl shadow-white/5"
                 >
-                  Book a FREE Session
+                  Book a Meeting
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
