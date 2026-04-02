@@ -108,7 +108,6 @@ export default function App() {
                   className="w-full sm:w-auto px-10 py-5 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all duration-500 flex items-center justify-center gap-3 group shadow-xl shadow-white/5"
                 >
                   Book a Meeting
-                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="#expertise"
@@ -119,6 +118,7 @@ export default function App() {
                   className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium text-center inline-block"
                 >
                   View Expertise
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </motion.div>
@@ -154,7 +154,7 @@ export default function App() {
                 transition={{ duration: 0.8 }}
                 className="text-center md:text-left flex flex-col items-center md:items-start"
               >
-                <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">The Vision</span>
+                <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">The Experience</span>
                 <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">An experienced <br />Tech Lead & Founder</h2>
                 <p className="text-zinc-400 text-xl leading-relaxed mb-10 font-light text-center md:text-left">
                   {MENTOR_DATA.bio}

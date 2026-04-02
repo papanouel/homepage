@@ -109,7 +109,7 @@ export const MENTOR_DATA: MentorProfile = {
       company: "TinyHoopers",
       description: "Scaled a social media ecosystem to 50K+ followers, 12K+ Discord members and 20K+ email subscribers. Converted organic growth into 80K+ Beta downloads via automated serverless pipelines.",
       link: {
-        text: "Read the Case Study",
+        text: "More Infos",
         url: "/?page=tinyhoopers"
       }
     },

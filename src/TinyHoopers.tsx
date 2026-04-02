@@ -54,7 +54,7 @@ export default function TinyHoopers() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            TinyHoopers —<br />
+            TinyHoopers<br />
             <span className="text-3xl md:text-5xl text-zinc-400 font-light mt-4 block">From Automated Content to Game Product</span>
           </h1>
 
