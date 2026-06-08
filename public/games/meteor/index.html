@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Defense - Arcade Game</title>
+    <!-- Google Fonts for futuristic look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Phaser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <!-- Game Canvas Container -->
+        <div id="phaser-container"></div>
+
+        <!-- UI Layer: all DOM overlays scaled together to match the Phaser FIT canvas -->
+        <div id="ui-layer">
+
+        <!-- HUD overlay -->
+        <div id="hud-container">
+            <!-- Health bar component -->
+            <div class="hud-panel health-panel">
+                <div class="health-icon-container">
+                    <i class="fa-solid fa-heart health-icon"></i>
+                </div>
+                <div class="hud-label">PLAYER HEALTH</div>
+                <div class="health-bar-bg">
+                    <div id="health-bar-fill">
+                        <div class="pulse-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress component -->
+            <div class="hud-panel progress-panel">
+                <div class="trophy-icon-container">
+                    <i class="fa-solid fa-trophy trophy-icon"></i>
+                </div>
+                <div class="progress-details">
+                    <div class="hud-label">PROGRESS</div>
+                    <div id="progress-text">0 / 15</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screens Overlay -->
+        <div id="screen-overlay" class="screen-overlay">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen-content hidden">
+                <h1 class="glow-title">MATH DEFENSE</h1>
+                <p class="subtitle">Defend the city from incoming asteroid showers by solving mathematical equations!</p>
+                <button id="start-btn" class="action-btn">INITIALIZE DEFENSES</button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen-content hidden">
+                <h1 class="glow-title game-over-title">CITY DESTROYED</h1>
+                <p class="summary-text">The meteor shower breached our shields.</p>
+                <div class="score-card">
+                    <div>METEORS BLASTED: <span id="final-destroyed-lost" class="glow-orange">0</span></div>
+                </div>
+                <button id="restart-btn-lost" class="action-btn">REDEPLOY DEFENSES</button>
+            </div>
+
+            <!-- Win Screen -->
+            <div id="win-screen" class="screen-content hidden">
+                <h1 class="glow-title win-title">VICTORY</h1>
+                <p class="summary-text">The city is safe! All incoming threats neutralized.</p>
+                <div class="score-card">
+                    <div>METEORS BLASTED: <span class="glow-green">15 / 15</span></div>
+                </div>
+                <button id="restart-btn-win" class="action-btn">NEW MISSION</button>
+            </div>
+        </div>
+
+        </div><!-- end #ui-layer -->
+
+    </div>
+
+    <!-- Cockpit Bottom Panel overlay -->
+    <div id="cockpit-container">
+      <div id="cockpit-inner">
+        <!-- Left Radar Section -->
+        <div class="cockpit-section radar-section">
+            <div class="radar-outer">
+                <div class="radar-sweep"></div>
+                <div class="radar-grid"></div>
+                <div class="radar-blip blip-1"></div>
+                <div class="radar-blip blip-2"></div>
+            </div>
+            <!-- Status lights -->
+            <div class="status-lights">
+                <div class="light-col">
+                    <div class="bar-light active"></div>
+                    <div class="bar-light active"></div>
+                    <div class="bar-light active"></div>
+                    <div class="bar-light active"></div>
+                    <div class="bar-light"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Math Panel Section -->
+        <div class="cockpit-section main-control-section">
+            <div class="equation-box">
+                <span id="equation-prompt">What is <span id="equation-text">...</span> = <span id="equation-question-mark">?</span></span>
+            </div>
+            <form id="input-form" autocomplete="off">
+                <input type="text" id="answer-input" placeholder="Type the answer" autofocus>
+                <button type="submit" id="fire-btn">
+                    <i class="fa-solid fa-rocket"></i> FIRE
+                </button>
+                <button type="button" id="skip-btn">
+                    <i class="fa-solid fa-arrows-rotate"></i> SKIP
+                </button>
+            </form>
+        </div>
+
+        <!-- Right Systems Section -->
+        <div class="cockpit-section systems-section">
+            <div class="system-monitor">
+                <div class="sys-row"><span class="sys-label">SYS_OK:</span> <span class="sys-val glow-green">TRUE</span></div>
+                <div class="sys-row"><span class="sys-label">SHIELD:</span> <span class="sys-val glow-cyan">MAX</span></div>
+                <div class="sys-row"><span class="sys-label">WEAPON:</span> <span class="sys-val glow-orange">READY</span></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="crash-flash"></div>
+
+    <!-- Main Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>
