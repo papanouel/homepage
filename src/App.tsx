@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
   Gamepad2,
   Cloud,
@@ -32,13 +32,8 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 );
 import { motion } from 'motion/react';
 import { MENTOR_DATA } from '@/constants';
-import { HeroScene } from './components/HeroScene';
-
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
+// 3D view disabled for now — re-enable by uncommenting this import and the <HeroScene /> render below.
+// import { HeroScene } from './components/HeroScene';
 
 const iconMap: Record<string, React.ReactNode> = {
   Gamepad2: <Gamepad2 className="w-6 h-6" />,
@@ -59,12 +54,6 @@ const expertiseColors = [
 ];
 
 export default function App() {
-  const expertiseRef = useRef<HTMLElement>(null);
-
-  const scrollToExpertise = () => {
-    expertiseRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Background Gradients */}
@@ -73,19 +62,14 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-16 z-10">
-          <div className="container max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 lg:gap-16">
-            {/* Left Column: Text & CTA */}
+          <div className="container max-w-6xl mx-auto px-6">
+            {/* Text & CTA */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative z-10 text-center md:text-left flex flex-col items-center md:items-start order-2 md:order-1"
+              className="relative z-10 w-full text-center md:text-left flex flex-col items-center md:items-start"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 mb-8">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Available Now
-              </div>
-
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20 leading-[0.8]">
                 Frederic<br />Nouel
               </h1>
@@ -98,46 +82,22 @@ export default function App() {
                 {MENTOR_DATA.tagline}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center gap-6">
-                <button
-                  onClick={() => {
-                    if (window.Calendly) {
-                      window.Calendly.initPopupWidget({ url: MENTOR_DATA.calendly });
-                    }
-                  }}
-                  className="w-full sm:w-auto px-10 py-5 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all duration-500 flex items-center justify-center gap-3 group shadow-xl shadow-white/5"
-                >
-                  Book a Meeting
-                </button>
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <a
-                  href="#expertise"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToExpertise();
-                  }}
-                  className="w-full sm:w-auto px-10 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium text-center inline-block"
+                  href="/?page=poc"
+                  className="w-full sm:w-auto px-8 py-5 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all duration-500 flex items-center justify-center gap-2 group shadow-xl shadow-white/5"
                 >
-                  View Expertise
+                  Book a POC Kickoff
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-              </div>
-            </motion.div>
-
-            {/* Right Column: 3D Scene */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-              className="relative aspect-[16/13] w-full max-w-2xl mx-auto order-1 md:order-2 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-300 to-indigo-400 border border-white/20 ring-1 ring-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-20" />
-
-              {/* Decorative Elements */}
-              <div className="absolute top-10 right-10 w-24 h-24 bg-white/20 blur-3xl rounded-full z-0 animate-pulse" />
-              <div className="absolute bottom-20 left-10 w-32 h-32 bg-indigo-500/20 blur-3xl rounded-full z-0 animate-pulse delay-1000" />
-
-              <div className="relative z-10 w-full h-full">
-                <HeroScene />
+                <a
+                  href={MENTOR_DATA.booking.discovery}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-8 py-5 glass rounded-full hover:bg-white/10 transition-all duration-500 font-medium text-center inline-flex items-center justify-center"
+                >
+                  Book a discovery call
+                </a>
               </div>
             </motion.div>
           </div>
@@ -196,7 +156,7 @@ export default function App() {
         </section>
 
         {/* Expertise Section */}
-        <section id="expertise" ref={expertiseRef} className="relative py-32 z-10">
+        <section id="expertise" className="relative py-32 z-10">
           <div className="container max-w-6xl mx-auto px-6">
             <div className="text-center mb-24">
               <span className="text-emerald-400 font-display text-xs uppercase tracking-[0.3em] mb-6 block font-bold">Expertise</span>

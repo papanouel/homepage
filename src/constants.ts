@@ -10,7 +10,10 @@ export interface MentorProfile {
   consultantPhilosophy: string;
   location: string;
   languages: string[];
-  calendly: string;
+  booking: {
+    pocKickoff: string;
+    discovery: string;
+  };
   socials: {
     linkedin: string;
     twitter: string;
@@ -151,7 +154,10 @@ export const MENTOR_DATA: MentorProfile = {
   consultantPhilosophy: "The goal is to bridge the gap between complex technical challenges and market-ready products—fast. For founders launching an MVP, the surest path to success is lean, iterative execution.",
   location: "Tokyo / Remote",
   languages: ["French (Native)", "English (Fluent)", "Japanese (Business)"],
-  calendly: "https://calendly.com/papanouel/30min-call",
+  booking: {
+    pocKickoff: "https://cal.eu/papanouel/poc-kickoff",
+    discovery: "https://cal.eu/papanouel/30min",
+  },
   socials: {
     linkedin: "https://www.linkedin.com/in/papanouel/",
     twitter: "https://twitter.com/papanouel",
